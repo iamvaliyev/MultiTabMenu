@@ -20,26 +20,73 @@ You can also inflate MultiTabMenu from XML:
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"/>
         
-Java Code
+## Java Code
+
+    multiTabMenu = (MultiTabMenu) findViewById(R.id.multiTabMenu);
+    
+Setup Adapter
+
+    multiTabMenu.setupSubCategories(new CategoryAdapter(getApplicationContext(), list));
+
+Adapter:
+    
     public class CategoryAdapter extends ParentAdapter {
 
-    List<Cat> list;
+        List<Cat> list;
 
-    public CategoryAdapter(Context context, List<Cat> list) {
-        super(context, list);
-        .......
+        public CategoryAdapter(Context context, List<Cat> list) {
+            super(context, list);
+            .......
+        }
+
+        @Override
+        public View getSectionView(int position, View view, ViewGroup parent) {
+            .......
+        }
+
+        @Override
+        public View getChildView(int position, int childPosition, View view, ViewGroup parent) {
+            .......
+        }
     }
 
-    @Override
-    public View getSectionView(int position, View view, ViewGroup parent) {
-        .......
+Model with CategoryWrapper:
+    
+    public class YourCategoryModel implements Category<YourSubCategoryModel> {
+
+        String title;
+        List<YourSubCategoryModel> list = new ArrayList<>();
+
+        public Cat(String title) {
+            this.title = title;
+        }
+
+        @Override
+        public List getChildItems() {
+            return list;
+        }
+
+        public String getTitle() {
+            return title;
+        }
+
+        public void setTitle(String title) {
+            this.title = title;
+        }
+
+        public List<YourSubCategoryModel> getList() {
+            return list;
+        }
+
+        public void setList(List<YourSubCategoryModel> list) {
+            this.list = list;
+        }
+
+        public void add(SubCat subCat){
+            list.add(subCat);
+        }
     }
 
-    @Override
-    public View getChildView(int position, int childPosition, View view, ViewGroup parent) {
-        .......
-    }
-}
         
 ## Attributes
         app:categoriesBackground="@color/colorPrimaryDark"
