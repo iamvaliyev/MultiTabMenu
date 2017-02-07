@@ -9,7 +9,7 @@ repositories{
 }
 
 dependencies{
-    compile 'MultiTabMenu:library:unspecified'
+    compile 'io.github.iamvaliyev:library:1.0'
 }
 ```
 ## How to use?
@@ -19,6 +19,27 @@ You can also inflate MultiTabMenu from XML:
         android:id="@+id/multiTabMenu"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"/>
+        
+Java Code
+    public class CategoryAdapter extends ParentAdapter {
+
+    List<Cat> list;
+
+    public CategoryAdapter(Context context, List<Cat> list) {
+        super(context, list);
+        .......
+    }
+
+    @Override
+    public View getSectionView(int position, View view, ViewGroup parent) {
+        .......
+    }
+
+    @Override
+    public View getChildView(int position, int childPosition, View view, ViewGroup parent) {
+        .......
+    }
+}
         
 ## Attributes
         app:categoriesBackground="@color/colorPrimaryDark"
