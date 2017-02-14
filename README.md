@@ -26,9 +26,23 @@ You can also inflate MultiTabMenu from XML:
 
     multiTabMenu = (MultiTabMenu) findViewById(R.id.multiTabMenu);
     
-Setup Adapter
+Setup Adapter:
 
     multiTabMenu.setupSubCategories(new CategoryAdapter(getApplicationContext(), list));
+
+Listener:
+
+    multiTabMenu.setOnCategorySelectedListener(new MultiTabMenu.OnCategorySelectedListener() {
+               @Override
+               public void onCategorySelected(Category category) {
+                   ....
+               }
+
+               @Override
+               public void OnSubCategorySelected(Object object) {
+                   ....
+               }
+           });
 
 Adapter:
     
