@@ -3,19 +3,21 @@ package io.github.iamvaliyev.multitabmenudemo.models;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Category implements io.github.iamvaliyev.multitabmenu.models.Category<SubCategory> {
+import io.github.iamvaliyev.multitabmenu.models.Category;
+
+public class Cat implements Category<SubCat> {
 
     int icon;
     String title;
 
-    List<SubCategory> list = new ArrayList<>();
+    List<SubCat> list = new ArrayList<>();
 
-    public Category(int icon, String title) {
+    public Cat(int icon, String title) {
         this.icon = icon;
         this.title = title;
     }
 
-    public Category(List<SubCategory> list) {
+    public Cat(List<SubCat> list) {
         this.list = list;
     }
 
@@ -40,15 +42,15 @@ public class Category implements io.github.iamvaliyev.multitabmenu.models.Catego
         this.title = title;
     }
 
-    public List<SubCategory> getList() {
+    public List<SubCat> getList() {
         return list;
     }
 
-    public void setList(List<SubCategory> list) {
+    public void setList(List<SubCat> list) {
         this.list = list;
     }
 
-    public void add(SubCategory subCategory){
-        list.add(subCategory);
+    public void add(SubCat subCat){
+        list.add(subCat);
     }
 }

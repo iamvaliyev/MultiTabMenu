@@ -39,6 +39,8 @@ public class MultiTabMenu extends LinearLayout {
 
     ParentAdapter adapter;
 
+    OnCategorySelectedListener onCategorySelectedListener;
+
     public MultiTabMenu(Context context) {
         super(context);
         initView();
@@ -112,7 +114,23 @@ public class MultiTabMenu extends LinearLayout {
         slCategories.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                if (onCategorySelectedListener != null)
+                    onCategorySelectedListener.onCategorySelected(categories.get(i));
+
                 slSubCategories.setAdapter(adapter.getChildAdapter(i));
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        slSubCategories.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                if (onCategorySelectedListener != null)
+                    onCategorySelectedListener.OnSubCategorySelected(categories.get(slCategories.getSelectedItemPosition()).getChildItems().get(i));
             }
 
             @Override
@@ -123,24 +141,20 @@ public class MultiTabMenu extends LinearLayout {
 
     }
 
-//    public void setupSubCategories(List<Category> list) {
-//        categories = list;
-//        Log.e("Size2", categories.size() + "");
-//
-//        if (adapter != null) {
-//            adapter.setList(categories);
-//
-//            slCategories.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-//                @Override
-//                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-//                    slSubCategories.setAdapter(adapter.getChildAdapter(i));
-//                }
-//
-//                @Override
-//                public void onNothingSelected(AdapterView<?> adapterView) {
-//
-//                }
-//            });
-//        }
-//    }
+    public OnCategorySelectedListener getOnCategorySelectedListener() {
+        return onCategorySelectedListener;
+    }
+
+    public void setOnCategorySelectedListener(OnCategorySelectedListener onCategorySelectedListener) {
+        this.onCategorySelectedListener = onCategorySelectedListener;
+    }
+
+    public interface OnCategorySelectedListener {
+
+        void onCategorySelected(Category category);
+
+        void OnSubCategorySelected(Object object);
+
+    }
+
 }

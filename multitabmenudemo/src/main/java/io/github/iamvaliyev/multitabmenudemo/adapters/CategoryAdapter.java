@@ -12,13 +12,13 @@ import java.util.List;
 
 import io.github.iamvaliyev.multitabmenu.adapters.ParentAdapter;
 import io.github.iamvaliyev.multitabmenudemo.R;
-import io.github.iamvaliyev.multitabmenudemo.models.Category;
+import io.github.iamvaliyev.multitabmenudemo.models.Cat;
 
 public class CategoryAdapter extends ParentAdapter {
 
-    List<Category> list;
+    List<Cat> list;
 
-    public CategoryAdapter(Context context, List<Category> list) {
+    public CategoryAdapter(Context context, List<Cat> list) {
         super(context, list);
         this.list = list;
     }
