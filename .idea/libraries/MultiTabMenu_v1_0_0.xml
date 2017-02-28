@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="MultiTabMenu-v1.0.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/multitabmenudemo/build/intermediates/exploded-aar/com.github.iamvaliyev/MultiTabMenu/v1.0.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/multitabmenudemo/build/intermediates/exploded-aar/com.github.iamvaliyev/MultiTabMenu/v1.0.0/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.iamvaliyev/MultiTabMenu/v1.0.0/bed035b097264a817690319ad5718cbc8ff2dbdd/MultiTabMenu-v1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
