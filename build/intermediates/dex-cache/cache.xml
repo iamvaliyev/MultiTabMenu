@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/Valiyev/MultiTabMenu/multitabmenudemo/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="772bed2d992b67b9d0327f766cc95cd63031dcd3">
+        <dex dex="/Users/Valiyev/MultiTabMenu/multitabmenudemo/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-25.0.1_2f8eaaafac15b5f77bd0e4876cd6bef85592d8d1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Valiyev/MultiTabMenu/multitabmenudemo/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="f83b00041ecfba705603fec40363416c7de69719">
+        <dex dex="/Users/Valiyev/MultiTabMenu/multitabmenudemo/build/intermediates/pre-dexed/debug/internal_impl-25.0.1_1d988eb0e4ed20c5f43316a4f98ecb3b23219063.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Valiyev/MultiTabMenu/multitabmenudemo/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="3af8cc51ef7088e56f132780da8c0bd858b6a6ad">
+        <dex dex="/Users/Valiyev/MultiTabMenu/multitabmenudemo/build/intermediates/pre-dexed/debug/internal_impl-25.0.1_9befb72cfadde71353130ed31a83c9c3337a1554.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Valiyev/MultiTabMenu/multitabmenudemo/build/intermediates/exploded-aar/io.github.iamvaliyev/library/1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="c3e5473f6211a34ca3c0fa5359b284b78c14cef5">
+        <dex dex="/Users/Valiyev/MultiTabMenu/multitabmenudemo/build/intermediates/pre-dexed/debug/io.github.iamvaliyev-library-1.0_74f14c628844990bc05fc6fe6bf817e5b8193c3c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Valiyev/MultiTabMenu/multitabmenudemo/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="00d4c8eebf2b681073c72a26bd0849549e51c7cb">
+        <dex dex="/Users/Valiyev/MultiTabMenu/multitabmenudemo/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.0.1_63cf45be7a917fcc624e6447c680d6035b0115e9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Valiyev/MultiTabMenu/multitabmenudemo/build/intermediates/exploded-aar/com.android.support/support-v4/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/Valiyev/MultiTabMenu/multitabmenudemo/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.0.1_f2e174d889661d137f72e71ea179fb0eefe68ea6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Valiyev/MultiTabMenu/multitabmenudemo/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="bc7e99e8d0fc279a05aa91378530f467ad62d443">
+        <dex dex="/Users/Valiyev/MultiTabMenu/multitabmenudemo/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.0.1_e46e5ba4697b246804a3fad791e320caedb1bcd1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Valiyev/MultiTabMenu/multitabmenudemo/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="6a1479afe9f1b3645e1cd9a87318976893472818">
+        <dex dex="/Users/Valiyev/MultiTabMenu/multitabmenudemo/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.0.1_98d9df9939b0d58c7c44d8f584ab12c4a3c7ea8a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Valiyev/MultiTabMenu/multitabmenudemo/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="c5b7145fb34779b6639147b8f2f8dd77c0db771b">
+        <dex dex="/Users/Valiyev/MultiTabMenu/multitabmenudemo/build/intermediates/pre-dexed/debug/internal_impl-25.0.1_22228cb627b0a7b65c5a7f42520dab5b4810982f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Valiyev/MultiTabMenu/multitabmenudemo/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="f7ac4b327fdb9e2ee386f5adc46164927658de4b">
+        <dex dex="/Users/Valiyev/MultiTabMenu/multitabmenudemo/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-25.0.1_2cac169f1183574c7d2af8a7caa2617655f4ebec.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Valiyev/MultiTabMenu/multitabmenudemo/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="26c6eef571592c91f29e56fda0bac73321de0c92">
+        <dex dex="/Users/Valiyev/MultiTabMenu/multitabmenudemo/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.0.1_7d0b2ae0b6659c68230fb5d3614bc7b6d10af4df.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Valiyev/MultiTabMenu/multitabmenudemo/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="/Users/Valiyev/MultiTabMenu/multitabmenudemo/build/intermediates/pre-dexed/debug/internal_impl-25.0.1_b77c472b93cbbad113df6118f2231864a2f7c7a8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Valiyev/MultiTabMenu/multitabmenudemo/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="c0bd6ffb002a85b5e7cad29f8558d1cc59539679">
+        <dex dex="/Users/Valiyev/MultiTabMenu/multitabmenudemo/build/intermediates/pre-dexed/debug/internal_impl-25.0.1_9bac6bd5341f286fb90c15a528be3429fcff2399.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Valiyev/MultiTabMenu/multitabmenudemo/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="297d4bcf6ed4e747a1bf7d0d094a2d911a8d3a8e">
+        <dex dex="/Users/Valiyev/MultiTabMenu/multitabmenudemo/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-25.0.1_ffd5ba0861a34ec1deabaf88ea02e402ff88e99a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Valiyev/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.0.1/support-annotations-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="a09194311f8f89c3e6db09d79f50897a889d615e">
+        <dex dex="/Users/Valiyev/MultiTabMenu/multitabmenudemo/build/intermediates/pre-dexed/debug/support-annotations-25.0.1_75e2a3a2f7c667f27a73d723726619718223e304.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Valiyev/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/Users/Valiyev/MultiTabMenu/multitabmenudemo/build/intermediates/pre-dexed/debug/picasso-2.5.2_41b735d8be82d538bcda307c80528e2f70fa7fd4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Valiyev/MultiTabMenu/multitabmenudemo/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
+        <dex dex="/Users/Valiyev/MultiTabMenu/multitabmenudemo/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.0.1_7d6c35fb3f9de73e814b93a547704d4b9003e699.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Valiyev/MultiTabMenu/multitabmenudemo/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="b24e1c688744078e1fa833ffadf696794761bbe5">
+        <dex dex="/Users/Valiyev/MultiTabMenu/multitabmenudemo/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.0.1_c585c1664e337d4b432c0b7de661fd06c3144935.jar" />
+    </item>
+
+</items>

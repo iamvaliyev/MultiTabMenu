@@ -5,6 +5,7 @@ import android.content.res.TypedArray;
 import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.FrameLayout;
@@ -40,6 +41,11 @@ public class MultiTabMenu extends LinearLayout {
     ParentAdapter adapter;
 
     OnCategorySelectedListener onCategorySelectedListener;
+
+    Category selectedCategory;
+    Object selectedSubCategory;
+
+    boolean isTouching = false;
 
     public MultiTabMenu(Context context) {
         super(context);
@@ -105,39 +111,89 @@ public class MultiTabMenu extends LinearLayout {
         subCategoriesBackground = ContextCompat.getColor(getContext(), R.color.subCategoriesBackground);
     }
 
-    public void setupSubCategories(ParentAdapter adap) {
+    public void setAdapter(final ParentAdapter adap) {
         categories = adap.getList();
         Log.e("Size2", categories.size() + "");
         this.adapter = adap;
         slCategories.setAdapter(adapter);
+        slSubCategories.setAdapter(adapter.getChildAdapter(0));
 
-        slCategories.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        selectedCategory = adapter.getItem(0);
+        selectedSubCategory = adapter.getChildAdapter(0).getItem(0);
+
+        slCategories.setOnTouchListener(new OnTouchListener() {
             @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                if (onCategorySelectedListener != null)
-                    onCategorySelectedListener.onCategorySelected(categories.get(i));
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
+                    isTouching = true;
+                } else if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                    isTouching = false;
 
-                slSubCategories.setAdapter(adapter.getChildAdapter(i));
-            }
+                    if (onCategorySelectedListener != null)
+                        onCategorySelectedListener.onCategorySelected(categories.get(slCategories.getSelectedItemPosition()));
 
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
+                    selectedCategory = adapter.getItem(slCategories.getSelectedItemPosition());
 
+                    slSubCategories.setAdapter(adapter.getChildAdapter(slCategories.getSelectedItemPosition()));
+
+
+                    if (onCategorySelectedListener != null)
+                        onCategorySelectedListener.OnSubCategorySelected(categories.get(slCategories.getSelectedItemPosition()).getChildItems().get(slSubCategories.getSelectedItemPosition()));
+
+                    selectedSubCategory = adapter.getChildAdapter(slCategories.getSelectedItemPosition()).getItem(slSubCategories.getSelectedItemPosition());
+
+                }
+                return false;
             }
         });
 
-        slSubCategories.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        slSubCategories.setOnTouchListener(new OnTouchListener() {
             @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                if (onCategorySelectedListener != null)
-                    onCategorySelectedListener.OnSubCategorySelected(categories.get(slCategories.getSelectedItemPosition()).getChildItems().get(i));
-            }
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
+                    isTouching = true;
+                } else if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                    isTouching = false;
+                    if (onCategorySelectedListener != null)
+                        onCategorySelectedListener.OnSubCategorySelected(categories.get(slCategories.getSelectedItemPosition()).getChildItems().get(slSubCategories.getSelectedItemPosition()));
 
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
+                    selectedSubCategory = adapter.getChildAdapter(slCategories.getSelectedItemPosition()).getItem(slSubCategories.getSelectedItemPosition());
+                }
+                return false;
             }
         });
+
+//        slCategories.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+//                if (onCategorySelectedListener != null)
+//                    onCategorySelectedListener.onCategorySelected(categories.get(i));
+//
+//                selectedCategory = adapter.getItem(i);
+//
+//                slSubCategories.setAdapter(adapter.getChildAdapter(i));
+//            }
+//
+//            @Override
+//            public void onNothingSelected(AdapterView<?> adapterView) {
+//
+//            }
+//        });
+//
+//        slSubCategories.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+//                if (onCategorySelectedListener != null)
+//                    onCategorySelectedListener.OnSubCategorySelected(categories.get(slCategories.getSelectedItemPosition()).getChildItems().get(i));
+//
+//                selectedSubCategory = adapter.getChildAdapter(slCategories.getSelectedItemPosition()).getItem(i);
+//            }
+//
+//            @Override
+//            public void onNothingSelected(AdapterView<?> adapterView) {
+//
+//            }
+//        });
 
     }
 
@@ -147,6 +203,30 @@ public class MultiTabMenu extends LinearLayout {
 
     public void setOnCategorySelectedListener(OnCategorySelectedListener onCategorySelectedListener) {
         this.onCategorySelectedListener = onCategorySelectedListener;
+    }
+
+    public Category getSelectedCategory() {
+        return selectedCategory;
+    }
+
+    public void selectCategory(int position) {
+        slCategories.setSelection(position);
+    }
+
+    public Object getSelectedSubCategory() {
+        return selectedSubCategory;
+    }
+
+    public void selectSubCategory(int position) {
+        slSubCategories.setSelection(position);
+    }
+
+    public int getSelectedCategoryPosition() {
+        return slCategories.getSelectedItemPosition();
+    }
+
+    public int getSelectedSubCategoryPosition() {
+        return slSubCategories.getSelectedItemPosition();
     }
 
     public interface OnCategorySelectedListener {
