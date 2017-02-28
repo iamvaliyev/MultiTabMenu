@@ -11,7 +11,7 @@ repositories{
 }
 
 dependencies{
-    compile 'com.github.iamvaliyev:MultiTabMenu:1.0.0'
+    compile 'com.github.iamvaliyev:MultiTabMenu:v1.0.0'
 }
 ```
 ## How to use?
@@ -25,6 +25,10 @@ You can also inflate MultiTabMenu from XML:
 ## Java Code
 
     multiTabMenu = (MultiTabMenu) findViewById(R.id.multiTabMenu);
+    multiTabMenu.getSelectedCategory(); // return Category
+    multiTabMenu.getSelectedSubCategory(); // return Object
+    multiTabMenu.getSelectedCategoryPosition(); // return int
+    multiTabMenu.getSelectedSubCategoryPosition(); // return int
     
 Setup Adapter:
 
