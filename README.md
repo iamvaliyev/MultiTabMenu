@@ -1,3 +1,4 @@
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-MultiTabMenu-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/5238)
 [![](https://jitpack.io/v/iamvaliyev/MultiTabMenu.svg)](https://jitpack.io/#iamvaliyev/MultiTabMenu)
 
 # MultiTabMenu
