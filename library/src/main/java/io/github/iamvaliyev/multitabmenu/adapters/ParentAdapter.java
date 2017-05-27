@@ -21,6 +21,7 @@ import android.content.Context;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 
 import java.util.List;
 
@@ -68,6 +69,12 @@ public abstract class ParentAdapter<S extends Category<C>, C> extends FancyCover
         return i;
     }
 
+
+//    @Override
+//    public View getView(int position, View convertView, ViewGroup parent) {
+//        return getSectionView(position, convertView, parent);
+//    }
+
     @Override
     public View getCoverFlowItem(int i, View view, ViewGroup viewGroup) {
         Log.e("AdapterParent", i + "");
@@ -86,7 +93,12 @@ public abstract class ParentAdapter<S extends Category<C>, C> extends FancyCover
             this.position = position;
         }
 
-        @Override
+//        @Override
+//        public View getView(int childPosition, View convertView, ViewGroup parent) {
+//            return getChildView(position, childPosition, convertView, parent);
+//        }
+
+                @Override
         public View getCoverFlowItem(int childPosition, View view, ViewGroup parent) {
             Log.e("AdapterParentChild", position + "");
             return getChildView(position, childPosition, view, parent);

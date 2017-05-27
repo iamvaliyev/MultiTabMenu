@@ -33,5 +33,5 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.0.1'
     testCompile 'junit:junit:4.12'
-    compile 'com.github.iamvaliyev:MultiTabMenu:v1.0.0'
+    compile project(':library')
 }

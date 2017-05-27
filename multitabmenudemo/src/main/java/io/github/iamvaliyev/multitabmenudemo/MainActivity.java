@@ -71,12 +71,14 @@ public class MainActivity extends AppCompatActivity {
         multiTabMenu.setOnCategorySelectedListener(new MultiTabMenu.OnCategorySelectedListener() {
             @Override
             public void onCategorySelected(Category category) {
-                Toast.makeText(getApplicationContext(), ((Cat) category).getTitle() + "", Toast.LENGTH_SHORT).show();
+                Log.e("onCategorySelected", ((Cat) category).getTitle());
+//                Toast.makeText(getApplicationContext(), ((Cat) category).getTitle() + "", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void OnSubCategorySelected(Object object) {
-                Toast.makeText(getApplicationContext(), ((SubCat) object).getTitle() + "", Toast.LENGTH_SHORT).show();
+                Log.e("OnSubCategorySelected", ((SubCat) object).getTitle());
+//                Toast.makeText(getApplicationContext(), ((SubCat) object).getTitle() + "", Toast.LENGTH_SHORT).show();
             }
         });
     }

@@ -5,7 +5,6 @@ import android.content.res.TypedArray;
 import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.FrameLayout;
@@ -121,79 +120,153 @@ public class MultiTabMenu extends LinearLayout {
         selectedCategory = adapter.getItem(0);
         selectedSubCategory = adapter.getChildAdapter(0).getItem(0);
 
-        slCategories.setOnTouchListener(new OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
-                    isTouching = true;
-                } else if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
-                    isTouching = false;
-
-                    if (onCategorySelectedListener != null)
-                        onCategorySelectedListener.onCategorySelected(categories.get(slCategories.getSelectedItemPosition()));
-
-                    selectedCategory = adapter.getItem(slCategories.getSelectedItemPosition());
-
-                    slSubCategories.setAdapter(adapter.getChildAdapter(slCategories.getSelectedItemPosition()));
-
-
-                    if (onCategorySelectedListener != null)
-                        onCategorySelectedListener.OnSubCategorySelected(categories.get(slCategories.getSelectedItemPosition()).getChildItems().get(slSubCategories.getSelectedItemPosition()));
-
-                    selectedSubCategory = adapter.getChildAdapter(slCategories.getSelectedItemPosition()).getItem(slSubCategories.getSelectedItemPosition());
-
-                }
-                return false;
-            }
-        });
-
-        slSubCategories.setOnTouchListener(new OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
-                    isTouching = true;
-                } else if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
-                    isTouching = false;
-                    if (onCategorySelectedListener != null)
-                        onCategorySelectedListener.OnSubCategorySelected(categories.get(slCategories.getSelectedItemPosition()).getChildItems().get(slSubCategories.getSelectedItemPosition()));
-
-                    selectedSubCategory = adapter.getChildAdapter(slCategories.getSelectedItemPosition()).getItem(slSubCategories.getSelectedItemPosition());
-                }
-                return false;
-            }
-        });
-
-//        slCategories.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//        slCategories.setOnTouchListener(new OnTouchListener() {
 //            @Override
-//            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-//                if (onCategorySelectedListener != null)
-//                    onCategorySelectedListener.onCategorySelected(categories.get(i));
+//            public boolean onTouch(View view, MotionEvent motionEvent) {
+//                Log.e("onTouch", "onTouch");
+//                if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
+//                    isTouching = true;
+//                } else if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
+//                    isTouching = false;
 //
-//                selectedCategory = adapter.getItem(i);
+//                    if (onCategorySelectedListener != null)
+//                        onCategorySelectedListener.onCategorySelected(categories.get(slCategories.getSelectedItemPosition()));
 //
-//                slSubCategories.setAdapter(adapter.getChildAdapter(i));
+//                    selectedCategory = adapter.getItem(slCategories.getSelectedItemPosition());
+//
+//                    slSubCategories.setAdapter(adapter.getChildAdapter(slCategories.getSelectedItemPosition()));
+//
+//
+//                    if (onCategorySelectedListener != null)
+//                        onCategorySelectedListener.OnSubCategorySelected(categories.get(slCategories.getSelectedItemPosition()).getChildItems().get(slSubCategories.getSelectedItemPosition()));
+//
+//                    selectedSubCategory = adapter.getChildAdapter(slCategories.getSelectedItemPosition()).getItem(slSubCategories.getSelectedItemPosition());
+//
+//                }
+//                return false;
+//            }
+//        });
+//
+//        slSubCategories.setOnTouchListener(new OnTouchListener() {
+//            @Override
+//            public boolean onTouch(View view, MotionEvent motionEvent) {
+//                if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
+//                    isTouching = true;
+//                } else if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
+//                    isTouching = false;
+//                    if (onCategorySelectedListener != null)
+//                        onCategorySelectedListener.OnSubCategorySelected(categories.get(slCategories.getSelectedItemPosition()).getChildItems().get(slSubCategories.getSelectedItemPosition()));
+//
+//                    selectedSubCategory = adapter.getChildAdapter(slCategories.getSelectedItemPosition()).getItem(slSubCategories.getSelectedItemPosition());
+//                }
+//                return false;
+//            }
+//        });
+
+//        slCategories.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                try {
+//                    if (onCategorySelectedListener != null)
+//                        onCategorySelectedListener.onCategorySelected(categories.get(position));
+//
+//                    selectedCategory = adapter.getItem(position);
+//
+//                    slSubCategories.setAdapter(adapter.getChildAdapter(position));
+//                } catch (Exception e) {
+//
+//                }
+//            }
+//        });
+//
+//        slCategories.setOnScrollPositionListener(new FeatureCoverFlow.OnScrollPositionListener() {
+//            @Override
+//            public void onScrolledToPosition(int position) {
+//                try {
+//                    if (onCategorySelectedListener != null)
+//                        onCategorySelectedListener.onCategorySelected(categories.get(position));
+//
+//                    selectedCategory = adapter.getItem(position);
+//
+//                    slSubCategories.setAdapter(adapter.getChildAdapter(position));
+//                } catch (Exception e) {
+//
+//                }
 //            }
 //
 //            @Override
-//            public void onNothingSelected(AdapterView<?> adapterView) {
+//            public void onScrolling() {
 //
 //            }
 //        });
 //
-//        slSubCategories.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+//        slSubCategories.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 //            @Override
-//            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-//                if (onCategorySelectedListener != null)
-//                    onCategorySelectedListener.OnSubCategorySelected(categories.get(slCategories.getSelectedItemPosition()).getChildItems().get(i));
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                try {
+//                    if (onCategorySelectedListener != null)
+//                        onCategorySelectedListener.OnSubCategorySelected(categories.get(slCategories.getSelectedItemPosition()).getChildItems().get(position));
 //
-//                selectedSubCategory = adapter.getChildAdapter(slCategories.getSelectedItemPosition()).getItem(i);
+//                    selectedSubCategory = adapter.getChildAdapter(slCategories.getSelectedItemPosition()).getItem(position);
+//
+//                } catch (Exception e) {
+//
+//                }
+//            }
+//        });
+//
+//        slSubCategories.setOnScrollPositionListener(new FeatureCoverFlow.OnScrollPositionListener() {
+//            @Override
+//            public void onScrolledToPosition(int position) {
+//                try {
+//                    if (onCategorySelectedListener != null)
+//                        onCategorySelectedListener.OnSubCategorySelected(categories.get(slCategories.getSelectedItemPosition()).getChildItems().get(position));
+//
+//                    selectedSubCategory = adapter.getChildAdapter(slCategories.getSelectedItemPosition()).getItem(position);
+//                } catch (Exception e) {
+//
+//                }
 //            }
 //
 //            @Override
-//            public void onNothingSelected(AdapterView<?> adapterView) {
+//            public void onScrolling() {
 //
 //            }
 //        });
+
+        slCategories.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                Log.e("onItemSelected", "onItemSelected");
+                if (onCategorySelectedListener != null)
+                    onCategorySelectedListener.onCategorySelected(categories.get(i));
+
+                selectedCategory = adapter.getItem(i);
+
+                slSubCategories.setAdapter(adapter.getChildAdapter(i));
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        slSubCategories.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                if (onCategorySelectedListener != null)
+                    onCategorySelectedListener.OnSubCategorySelected(categories.get(slCategories.getSelectedItemPosition()).getChildItems().get(i));
+
+                selectedSubCategory = adapter.getChildAdapter(slCategories.getSelectedItemPosition()).getItem(i);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
 
     }
 

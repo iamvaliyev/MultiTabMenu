@@ -22,8 +22,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_below="@+id/pd"
-                android:layout_marginTop="3dp"
                 android:layout_gravity="bottom"
+                android:layout_marginTop="3dp"
                 android:gravity="center_horizontal"
                 app:actionDistance="10"
                 app:maxRotation="0"
@@ -31,6 +31,19 @@
                 app:unselectedAlpha="1.0"
                 app:unselectedSaturation="1.0"
                 app:unselectedScale="1.0" />
+
+            <!--<it.moondroid.coverflow.components.ui.containers.FeatureCoverFlow-->
+                <!--android:id="@+id/slCategories"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="bottom"-->
+                <!--android:layout_marginTop="3dp"-->
+                <!--app:maxRotationAngle="0"-->
+                <!--app:maxScaleFactor="1.0"-->
+                <!--app:reflectionGap="0px"-->
+                <!--app:rotationThreshold="0"-->
+                <!--app:scalingThreshold="1"-->
+                <!--app:spacing="1" />-->
 
         </LinearLayout>
 
@@ -41,19 +54,34 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/ln">
 
+
+            <!--<it.moondroid.coverflow.components.ui.containers.FeatureCoverFlow-->
+                <!--android:id="@+id/slSubCategories"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginTop="6dp"-->
+                <!--android:gravity="center_horizontal"-->
+                <!--app:maxRotationAngle="0"-->
+                <!--app:maxScaleFactor="1.0"-->
+                <!--app:reflectionGap="0px"-->
+                <!--app:rotationThreshold="0"-->
+                <!--app:scalingThreshold="1"-->
+                <!--app:spacing="1" />-->
+
             <io.github.iamvaliyev.multitabmenu.coverflow.FancyCoverFlow
-                android:id="@+id/slSubCategories"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:layout_gravity="center"
-                android:gravity="center_horizontal"
-                app:actionDistance="10"
-                app:maxRotation="0"
-                app:scaleDownGravity="1.0"
-                app:unselectedAlpha="1.0"
-                app:unselectedSaturation="1.0"
-                app:unselectedScale="1.0" />
+            android:id="@+id/slSubCategories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            app:actionDistance="10"
+            app:maxRotation="0"
+            app:scaleDownGravity="1.0"
+            app:unselectedAlpha="1.0"
+            app:unselectedSaturation="1.0"
+            app:unselectedScale="1.0" />
 
             <io.github.iamvaliyev.multitabmenu.widgets.TriangleShapeView
                 android:id="@+id/triangle"
