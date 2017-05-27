@@ -1,5 +1,6 @@
 # MultiTabMenu
 MultiTabMenu support for Android 2.1(Eclair)+
+[![](https://jitpack.io/v/iamvaliyev/MultiTabMenu.svg)](https://jitpack.io/#iamvaliyev/MultiTabMenu)
 
 ![Preview](https://cloud.githubusercontent.com/assets/7686591/22694543/1d2ed4da-ed61-11e6-9a28-8a89a390e5f2.gif)
 
