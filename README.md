@@ -11,7 +11,7 @@ repositories{
 }
 
 dependencies{
-    compile 'com.github.iamvaliyev:MultiTabMenu:v1.0.0'
+    compile 'com.github.iamvaliyev:MultiTabMenu:v1.0.1'
 }
 ```
 ## How to use?
